@@ -1,2 +1,2 @@
 test:
-	python3 -m unittest discover -p 'test*.py' -v
+	python3 -m unittest discover -s ** -p 'test*.py'
