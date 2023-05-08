@@ -1,7 +1,7 @@
 
 
 def convert(number: int) -> str:
-    return "Error"
+    raise Exception("Unimplemented!")
 
 
 if __name__ == '__main__':
