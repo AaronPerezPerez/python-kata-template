@@ -1,2 +1,6 @@
 test:
-	python3 -m unittest discover -s ** -p 'test*.py'
+	pytest
+test:watch:
+	ptw
+install:
+	pip3 install -r requirements.txt
