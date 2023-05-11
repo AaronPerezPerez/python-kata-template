@@ -23,11 +23,13 @@ def test_should_return_fizz_with_numbers_divisible_by_five_and_three(number_divi
     assert fizzbuzz.convert(number_divisible_by_five_and_three) == "fizzbuzz"
 
 
-def test_should_raise_an_error_when_the_number_is_lower_than_one():
+@pytest.mark.parametrize("number_lower_than_1", [0, -123, -322, -897])
+def test_should_raise_an_error_when_the_number_is_lower_than_one(number_lower_than_1):
     with pytest.raises(ValueError):
-        fizzbuzz.convert(-1)
+        fizzbuzz.convert(number_lower_than_1)
 
 
-def test_should_raise_an_error_when_the_number_is_higher_than_one_hundred():
+@pytest.mark.parametrize("number_higher_than_100", [101, 205, 333, 412])
+def test_should_raise_an_error_when_the_number_is_higher_than_one_hundred(number_higher_than_100):
     with pytest.raises(ValueError):
-        fizzbuzz.convert(101)
+        fizzbuzz.convert(number_higher_than_100)

@@ -3,4 +3,5 @@ test:
 test-watch:
 	ptw --beforerun clear
 install:
-	pip3 install -r requirements.txt
+	python3 -m venv kataEnv && source kataEnv/bin/activate && pip3 install -r requirements.txt && source kataEnv/bin/activates
+
